@@ -1,0 +1,100 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(0, 34, 77); /* Deep blue background */
+    color: rgb(255, 255, 255); /* White text */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Header */
+header {
+    background-color: rgb(93, 14, 65); /* Dark purple */
+    color: rgb(199, 255, 216); /* Light green */
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.category {
+    background-color: rgb(60, 7, 83); /* Dark purple with a slight tint */
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column; /* Align elements vertically */
+    justify-content: flex-end; /* Push text down to the bottom */
+    align-items: center;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-decoration: none;
+    color: white;
+}
+
+.category:hover {
+    transform: scale(1.1); /* Hover animation */
+    background-color: rgb(93, 14, 65); /* Lighter purple on hover */
+}
+
+.category p {
+    font-size: 1.2rem;
+    margin: 10px 0 0 0;
+    position: relative; /* Ensures text appears at the bottom */
+    z-index: 1; /* Keeps text on top of other elements */
+}
+
+/* Sticker-like effect */
+.sticker {
+    background-color: rgb(145, 10, 103); /* Sticker color */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    transform: rotate(-15deg); /* Slight tilt for sticker effect */
+    z-index: 2; /* Keeps sticker on top */
+}
+
+/* Footer */
+footer {
+    background-color: rgb(93, 14, 65); /* Footer in dark purple */
+    color: rgb(199, 255, 216); /* Light green text */
+    text-align: center;
+    padding: 20px;
+}

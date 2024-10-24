@@ -1,0 +1,100 @@
+* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(59, 30, 84); /* Dark teal background */
+    color: rgb(238, 238, 238); /* Light green text */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Header */
+header {
+    background-color: rgba(74, 0, 118, 0.759); /* Teal */
+    color: rgb(238, 238, 238); /* Soft light green */
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.category {
+    background-color: rgba(0, 0, 0, 0.923); /* Same dark teal */
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    width: 320px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    box-shadow: 0 10px 25px rgb(112, 41, 255);
+    position: relative;
+    text-decoration: none;
+    color: rgb(255, 255, 255); /* Light green */
+}
+
+.category:hover {
+    transform: scale(1.05); /* Slight hover effect */
+    background-color: rgb(59, 30, 84); /* Lighter teal on hover */
+}
+
+.category p {
+    font-size: 1.1rem;
+    margin: 10px 0 0 0;
+    position: relative;
+    z-index: 1;
+}
+
+/* Sticker-like effect */
+.sticker {
+    background-color: rgba(202, 0, 233, 0.407); /* Light teal */
+    color: rgb(255, 255, 255); /* Dark teal text */
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    box-shadow: 0 5px 10px rgba(0, 217, 255, 0.94);
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    transform: rotate(-10deg); /* Slight tilt for sticker */
+    z-index: 2;
+}
+
+/* Footer */
+footer {
+    background-color: rgb(59, 30, 84); /* Footer in teal */
+    color: rgb(255, 255, 255); /* Light green text */
+    text-align: center;
+    padding: 20px;
+}
